@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace AccountantApp
 {
-    public partial class Form1 : Form
+    public partial class AccountantApp : Form
     {
-        public Form1()
+        public AccountantApp()
         {
             InitializeComponent();
+        }
+
+        private void Password_bx_TextChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void UsrNm_bx_TextChanged(object sender, EventArgs e)
+        {
+            UsrNm_bx.Text.PadLeft(8);
         }
     }
 }
