@@ -27,5 +27,24 @@ namespace AccountantApp
         {
             UsrNm_bx.Text.PadLeft(8);
         }
+
+        private void Login_btn_Click(object sender, EventArgs e)
+        {
+            validator();
+        }
+
+        void validator()
+        {
+            if (UsrNm_bx.Text==""&&Password_bx.Text=="")
+            {
+                Error_label.Visible = true;
+            }
+        }
+
+        private void Register_label_Click(object sender, EventArgs e)
+        {
+            Register_form register_Form = new Register_form();
+            register_Form.ShowDialog();
+        }
     }
 }
