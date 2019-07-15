@@ -32,7 +32,7 @@ namespace AccountantApp
         {
             validator();
         }
-
+        
         void validator()
         {
             if (UsrNm_bx.Text==""&&Password_bx.Text=="")

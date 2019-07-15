@@ -44,6 +44,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Save_Btn = new System.Windows.Forms.Button();
             this.paswrd_mach_label = new System.Windows.Forms.Label();
+            this.Back_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -173,7 +174,7 @@
             // 
             // Save_Btn
             // 
-            this.Save_Btn.Location = new System.Drawing.Point(226, 575);
+            this.Save_Btn.Location = new System.Drawing.Point(291, 575);
             this.Save_Btn.Name = "Save_Btn";
             this.Save_Btn.Size = new System.Drawing.Size(145, 30);
             this.Save_Btn.TabIndex = 13;
@@ -192,11 +193,22 @@
             this.paswrd_mach_label.Text = "Password Does Not Match:";
             this.paswrd_mach_label.Visible = false;
             // 
+            // Back_btn
+            // 
+            this.Back_btn.Location = new System.Drawing.Point(115, 575);
+            this.Back_btn.Name = "Back_btn";
+            this.Back_btn.Size = new System.Drawing.Size(145, 30);
+            this.Back_btn.TabIndex = 15;
+            this.Back_btn.Text = "Back";
+            this.Back_btn.UseVisualStyleBackColor = true;
+            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
+            // 
             // Register_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 641);
+            this.Controls.Add(this.Back_btn);
             this.Controls.Add(this.paswrd_mach_label);
             this.Controls.Add(this.Save_Btn);
             this.Controls.Add(this.pictureBox1);
@@ -240,5 +252,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Save_Btn;
         private System.Windows.Forms.Label paswrd_mach_label;
+        private System.Windows.Forms.Button Back_btn;
     }
 }

@@ -39,7 +39,15 @@ namespace AccountantApp
 
         private void Save_Btn_Click(object sender, EventArgs e)
         {
+
+            addToJson();
+
+        }
+
+        public void addToJson()
+        {
             PasswordValidation();
+
             users.Add(new User()
             {
                 FirstName = Name_bx.Text,
@@ -52,19 +60,29 @@ namespace AccountantApp
             });
 
             string json = JsonConvert.SerializeObject(users);
+            
+            
+            File.AppendAllLines(@"UsersData.txt", new string[] { json });
+            if (paswrd_mach_label.Visible==true)
+            {
 
-            Name_bx.Text = "";
-            Lst_nm_bx.Text = "";
-            ID_Bx.Text = "";
-            Pswrd_bx.Text = "";
-            Rpt_pswrd_bx.Text = "";
-            usrNm_bx.Text = "";
-            File.WriteAllText(@"UsersData.txt", json);
-            MessageBox.Show("Succesfully Registered");
-
-
+            }
+            else
+            {
+                Name_bx.Text = "";
+                Lst_nm_bx.Text = "";
+                ID_Bx.Text = "";
+                Pswrd_bx.Text = "";
+                Rpt_pswrd_bx.Text = "";
+                usrNm_bx.Text = "";
+                MessageBox.Show("Succesfully Registered");
+                    
+            }
         }
 
-        
+        private void Back_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
